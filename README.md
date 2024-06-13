@@ -69,7 +69,7 @@ Open your web browser and go to http://127.0.0.1:8000/
 Go to http://127.0.0.1:8000/customer/upload/
 Fill in the customer information form.
 Upload an Excel file with the customer's financial data.
-Submit the form.
+Upload the form.
 
 ### 2. View Financial Data Graph
 After submitting the form, you will be redirected to a page showing a graph of the customer's income and expenses over the last 12 months.
@@ -79,8 +79,8 @@ After submitting the form, you will be redirected to a page showing a graph of t
 customer_app/
     ├── migrations/
     ├── templates/
-        ├── upload_customer.html
         ├── customer_graph.html
+        ├── upload_customer.html
     ├── __init__.py
     ├── admin.py
     ├── apps.py
