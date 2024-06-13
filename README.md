@@ -96,5 +96,6 @@ workflow_project/
     ├── wsgi.py
 db.sqlite3
 manage.py
+README.md
 requirements.txt
 ```
