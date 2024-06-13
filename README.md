@@ -8,7 +8,6 @@ This project is a web-based workflow system developed in Python using the Django
 - [Installation](#installation)
 - [Running the Project](#running-the-project)
 - [Usage](#usage)
-- [License](#license)
 
 ## Features
 - Capture customer information (First Name, Last Name, Date of Birth).
