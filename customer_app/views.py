@@ -27,6 +27,11 @@ def upload_customer(request):
             customer = form.save(commit=False)
             excel_file = request.FILES['excel_file']
             data = pd.read_excel(excel_file)
+            try:
+                data = pd.read_excel(excel_file)
+            except Exception as e:
+                form.add_error('excel_file', 'Invalid Excel file format.')
+                return render(request, 'upload_customer.html', {'form': form})
 
             customer.save()
             for _, row in data.iterrows():

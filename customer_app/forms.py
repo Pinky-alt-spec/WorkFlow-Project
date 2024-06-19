@@ -16,3 +16,10 @@ class CustomerForm(forms.ModelForm):
         widgets = {
             'date_of_birth': forms.TextInput(attrs={'id': 'id_date_of_birth'}),
         }
+        
+    
+    def clean_excel_file(self):
+        excel_file = self.cleaned_data.get('excel_file')
+        if not excel_file.name.endswith('.xls') and not excel_file.name.endswith('.xlsx'):
+            raise forms.ValidationError('Only Excel files are allowed.')
+        return excel_file
